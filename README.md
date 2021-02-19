@@ -1,5 +1,5 @@
 # FE---ProyectoFinal
-Repositorio del proyecto final para la fundación esplai hecho por @VictorAlfonsoMarti, @ArnauDiezSans y @Jepolancodlc
+Repositorio del proyecto final para el curso de .Net Framework de la Fundación Esplai.
 
 ## ✒️ Autores: 
   - Jhon E. Polanco de la Cruz - [@John Polanco](https://github.com/Jepolancodlc)
