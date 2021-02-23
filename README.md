@@ -1,4 +1,4 @@
-# FE-ProyectoFinal
+# :octocat: FE-ProyectoFinal
 Repositorio del proyecto final para el curso de .Net Framework de la Fundación Esplai.
 
 ## ✒️ Autores: 
@@ -14,6 +14,8 @@ Repositorio del proyecto final para el curso de .Net Framework de la Fundación 
 
   #### 📺 Esquema del HTML 
   ![Esquema_HTML](https://user-images.githubusercontent.com/9554810/108497914-6e92fc00-72ac-11eb-83ab-6709ab83e0de.png)
+  #### 🌈 Paleta de Colores 
+  ![Paleta_Colores](https://user-images.githubusercontent.com/9554810/108842363-75d24680-75d9-11eb-816f-883f2e6039c4.png)
   
   #### 📚 Esquema de la Base de Datos
   ![FE-ProyectoFinal-John-Arnau-Victor](https://user-images.githubusercontent.com/9554810/108637754-45c95d00-748c-11eb-9731-5905c9504caa.png)
