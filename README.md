@@ -18,7 +18,7 @@ Repositorio del proyecto final para el curso de .Net Framework de la Fundación 
   #### 📚 Esquema de la Base de Datos
   ![FE-ProyectoFinal-John-Arnau-Victor](https://user-images.githubusercontent.com/9554810/108637754-45c95d00-748c-11eb-9731-5905c9504caa.png)
   
-  #### 📚 DataBases TrabajadoresNet y UsersTrabajadoresNet
+  #### :newspaper: DataBases TrabajadoresNet y UsersTrabajadoresNet
   Hemos subido la DB propuesta para el proyecto en un server preparado para MSSQL2019 que nos ofrece gratuitamente la web www.somee.com, con el nombre TrabajadoresNet.
   ![TrabajadoresNet](https://user-images.githubusercontent.com/76475912/108819716-79ef6b80-75bb-11eb-874a-eea44d2bd176.JPG)
   Además, hemos creado otra base de datos para controlar el logueo. UsersTrabajadoresNet.
