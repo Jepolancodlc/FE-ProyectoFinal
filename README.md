@@ -20,5 +20,7 @@ Repositorio del proyecto final para el curso de .Net Framework de la Fundación 
   
   #### :newspaper: DataBases TrabajadoresNet y UsersTrabajadoresNet
   Hemos subido la DB propuesta para el proyecto en un server preparado para MSSQL2019 que nos ofrece gratuitamente la web www.somee.com, con el nombre TrabajadoresNet.
-  ![TrabajadoresNet](https://user-images.githubusercontent.com/76475912/108819716-79ef6b80-75bb-11eb-874a-eea44d2bd176.JPG)
   Además, hemos creado otra base de datos para controlar el logueo. UsersTrabajadoresNet.
+  
+  
+  ![TrabajadoresNet](https://user-images.githubusercontent.com/76475912/108819716-79ef6b80-75bb-11eb-874a-eea44d2bd176.JPG)
