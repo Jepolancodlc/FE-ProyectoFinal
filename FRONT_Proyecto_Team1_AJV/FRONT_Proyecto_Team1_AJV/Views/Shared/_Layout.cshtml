@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="~/css/graph.css" />
     <link rel="stylesheet" href="~/css/menu.css" />
     <link rel="stylesheet" href="~/css/tabla.css" />
+    <!-- Links para importar las liberías de Kendo -->
+    <link href="https://kendo.cdn.telerik.com/2021.1.224/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="https://kendo.cdn.telerik.com/2021.1.224/styles/kendo.default.min.css" rel="stylesheet" />
+    <!-- FIN importar Links Kendo-->
 </head>
 <body>
     <header>
@@ -27,6 +31,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Container" asp-action="Graph">Graph</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Container" asp-action="Tabla">Tabla</a>
                         </li>
                     </ul>
                 </div>
@@ -51,13 +61,12 @@
     <script src="~/js/menu.js" asp-append-version="true"></script>
     <script src="~/js/tabla.js" asp-append-version="true"></script>
     <script src="~/js/token.js" asp-append-version="true"></script>
-    <!-- Token para el CRUD de la API -->
-    @section Token{
-        <script>
-            CallToken('token@token.com', 'TokenPassword');
-        </script>
-    }
-    <!-- FIN DE TOKEN -->
+    <!-- Scripts para importar Kendo -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.1.224/js/kendo.all.min.js"></script>
+    <!-- FIN scripts para importar Kendo -->
     @RenderSection("Scripts", required: false)
+    @RenderSection("Token", required: false)
+    @RenderSection("kendoCharts", required: false)
 </body>
 </html>
