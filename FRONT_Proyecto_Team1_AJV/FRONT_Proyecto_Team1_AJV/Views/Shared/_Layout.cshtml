@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FRONT_Proyecto_Team1_AJV</title>
+    <!-- Links para importar las liberías de Bootstrap -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <!-- FIN importar links Bootstrap -->
+    <!-- Links para importar las liberías de Font-Awesome -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- FIN importar links Font-Awesome -->
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/graph.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/tabla.css" />
+    <!-- Links para importar las liberías de Kendo -->
+    <link href="https://kendo.cdn.telerik.com/2021.1.224/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="https://kendo.cdn.telerik.com/2021.1.224/styles/kendo.default.min.css" rel="stylesheet" />
+    <!-- FIN importar Links Kendo-->
+</head>
+<body>
+    <!-- Header -->
+    <nav id="header" class="navbar navbar-light bg-light">
+        <button class="btnNav" onclick="myFunction()"><i class="fas fa-bars"></i></button>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Container" asp-action="Graph">Graph</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Container" asp-action="Tabla">Tabla</a>
+    </nav>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/graph.js" asp-append-version="true"></script>
+    <script src="~/js/menu.js" asp-append-version="true"></script>
+    <script src="~/js/tabla.js" asp-append-version="true"></script>
+    <script src="~/js/token.js" asp-append-version="true"></script>
+    <!-- Links para importar las liberías de Font-Awesome -->
+    <script src="https://kit.fontawesome.com/4b42849ead.js" crossorigin="anonymous"></script>
+    <!-- FIN importar links Font-Awesome -->
+    <!-- Scripts para importar Kendo -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.1.224/js/kendo.all.min.js"></script>
+    <!-- FIN scripts para importar Kendo -->
+    @RenderSection("Scripts", required: false)
+    @RenderSection("PrintTabla", required: false)
+    @RenderSection("Token", required: false)
+    @RenderSection("kendoCharts", required: false)
+</body>
+</html>

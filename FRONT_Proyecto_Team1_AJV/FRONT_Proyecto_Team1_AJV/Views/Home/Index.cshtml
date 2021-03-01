@@ -1,0 +1,62 @@
+﻿@{ ViewData["Title"] = "Home Page"; }
+<div hidden id="tokenAPI">
+    <!-- Token para el CRUD de la API -->
+    @section Token{
+        <script>CallToken('token@token.com', 'TokenPassword');</script>
+    }
+    <!-- FIN DE TOKEN -->
+
+</div>
+
+<!-- Sidebar -->
+<div class="col-auto col1" id="col1">
+    <div class="icon-bar">
+        <a href="#"><i class="fa fa-home"></i></a>
+        <a href="#" class="active"><i class="fa fa-search"></i> <label class="lblNames">Juan</label> </a>
+        <a href="#"><i class="fa fa-envelope"></i> <label class="lblNames">Juan</label> </a>
+        <a href="#"><i class="fa fa-globe"></i> <label class="lblNames">Juan</label> </a>
+        <a href="#"><i class="fa fa-search"></i><label class="lblNames">Juan</label> </a>
+        <a href="#"><i class="fa fa-envelope"></i><label class="lblNames">Juan</label> </a>
+        <a href="#"><i class="fa fa-globe"></i><label class="lblNames">Juan</label> </a>
+    </div>
+    <button type="button" id="btnHide" onclick="hideSideBar()"> <i class="fas fa-chevron-right"></i></button>
+</div>
+
+<!-- Main -->
+<div id="menus" class="col col2">
+    <!-- Menu Horizontal -->
+    <div id="menuHorizontal" class="row">
+        <div class="col colhor">
+            <button class="btnNav" onclick="myFunction2()"><i id="ico" class="fas fa-bars"></i></button>
+            <label> Trabajadores </label>
+            <div id="secbtn">
+                <button class="btnDis" disabled>
+                    <i class="bi bi-calendar-event"></i> <div id="fecha"></div>
+                </button>
+                <button class="btnDis" disabled>
+                    <i class="bi bi-diagram-3-fill"></i> Grupo Castilla (No
+                    tocar)
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="menuVertical" class="row h-100">
+        <!-- Menu Filtros -->
+        <div class="col-auto cola h-100" id="cola">
+            <ul>
+                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
+                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
+                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
+                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
+                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
+                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
+                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
+                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
+            </ul>
+        </div>
+        <!-- Tabla y Gráficos -->
+        <div id="containerContenido" class="col colb">.col-sm-8</div>
+    </div>
+</div>
