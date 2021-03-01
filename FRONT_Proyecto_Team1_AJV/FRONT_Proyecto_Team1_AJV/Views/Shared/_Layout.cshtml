@@ -4,7 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - FRONT_Proyecto_Team1_AJV</title>
+    <!-- Links para importar las liberías de Bootstrap -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <!-- FIN importar links Bootstrap -->
+    <!-- Links para importar las liberías de Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css%22%3E">
+    <!-- FIN importar links Font-Awesome -->
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/graph.css" />
     <link rel="stylesheet" href="~/css/menu.css" />
@@ -15,45 +21,21 @@
     <!-- FIN importar Links Kendo-->
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FRONT_Proyecto_Team1_AJV</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Container" asp-action="Graph">Graph</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Container" asp-action="Tabla">Tabla</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <!-- Header -->
+    <nav id="header" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <button class="btnNav" onclick="myFunction()"><i class="fas fa-bars"></i></button>
+        </a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Container" asp-action="Graph">Graph</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Container" asp-action="Tabla">Tabla</a>
+    </nav>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
             @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - FRONT_Proyecto_Team1_AJV - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            @RenderSection("Main", required: false);
+            @RenderSection("SideBar", required: false);
         </div>
-    </footer>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -61,12 +43,16 @@
     <script src="~/js/menu.js" asp-append-version="true"></script>
     <script src="~/js/tabla.js" asp-append-version="true"></script>
     <script src="~/js/token.js" asp-append-version="true"></script>
+    <!-- Links para importar las liberías de Font-Awesome -->
+    <script src="https://kit.fontawesome.com/4b42849ead.js" crossorigin="anonymous"></script>
+    <!-- FIN importar links Font-Awesome -->
     <!-- Scripts para importar Kendo -->
     <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2021.1.224/js/kendo.all.min.js"></script>
     <!-- FIN scripts para importar Kendo -->
-    @RenderSection("Scripts", required: false)
-    @RenderSection("Token", required: false)
-    @RenderSection("kendoCharts", required: false)
+    @RenderSection("Scripts", required: false);
+    @RenderSection("PrintTabla", required: false);
+    @RenderSection("Token", required: false);
+    @RenderSection("kendoCharts", required: false);
 </body>
 </html>

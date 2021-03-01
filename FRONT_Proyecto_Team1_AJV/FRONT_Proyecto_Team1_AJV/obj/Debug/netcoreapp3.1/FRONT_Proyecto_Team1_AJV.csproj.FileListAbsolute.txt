@@ -596,7 +596,6 @@ C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJ
 C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\Razor\Views\Container\Graph.cshtml.g.cs
 C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\Razor\Views\Container\Tabla.cshtml.g.cs
 C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -610,3 +609,10 @@ C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJ
 C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\FRONT_Proyecto_Team1_AJV.dll
 C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\FRONT_Proyecto_Team1_AJV.pdb
 C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\FRONT_Proyecto_Team1_AJV.genruntimeconfig.cache
+C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\FRONT_Proyecto_Team1_AJV.RazorComponent.input.cache
+C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\RazorDeclaration\Views\Home\Menu.razor.g.cs
+C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\RazorDeclaration\Views\Home\SideBar.razor.g.cs
+C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\FRONT_Proyecto_Team1_AJV.RazorComponent.output.cache
+C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\RazorDeclaration\FRONT_Proyecto_Team1_AJV.dll
+C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\Razor\Views\Home\Menu.razor.g.cs
+C:\Users\victo\source\repos\FE-ProyectoFinal-Development\FRONT_Proyecto_Team1_AJV\FRONT_Proyecto_Team1_AJV\obj\Debug\netcoreapp3.1\Razor\Views\Home\SideBar.razor.g.cs
