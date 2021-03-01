@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bNuXzFqy5vA54pPgHjc9Q4XtbpDCO0Mc/4DqtQjtyulPq6fPOsYDyHSoxORTTv6ztBeNlrkYtLp22ShT0A9hsA==",
+  "dgSpecHash": "Z6llMe0d7TL9Ydg9BE5AILytjJv3Fg0+jF6EnparcFJDMbb3NiUQii+ha/ZR1BtKz9mGfB26U4hMbF7Xz2ciAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\victo\\source\\repos\\FE-ProyectoFinal-Development\\API_Proyecto_Team1_AJV\\API_Proyecto_Team1_AJV\\API_Proyecto_Team1_AJV.csproj",
+  "projectFilePath": "C:\\Users\\victo\\source\\repos\\FE-ProyectoFinal-Development_ANTICBO\\API_Proyecto_Team1_AJV\\API_Proyecto_Team1_AJV\\API_Proyecto_Team1_AJV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\victo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.8\\microsoft.aspnetcore.authentication.jwtbearer.3.1.8.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
