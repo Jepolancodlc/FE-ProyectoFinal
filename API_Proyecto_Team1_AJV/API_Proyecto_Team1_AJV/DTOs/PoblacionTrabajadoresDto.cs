@@ -12,7 +12,8 @@ namespace API_Proyecto_Team1_AJV.DTOs
          */
 
         // ATRIBUTOS, GETTERS Y SETTERS
-        public string D_Provincia { get; set; }
         public string D_Poblacion { get; set; }
+        public int Coincidencias { get; set; }
+
     }
 }

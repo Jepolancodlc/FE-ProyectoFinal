@@ -2,12 +2,12 @@
 @{ ViewData["Title"] = "Tabla"; }
 
 <h1>Tabla</h1>
-<table id="TablaSuperCheta"></table>
+<table id="tablaContainer"></table>
 
 
 @section PrintTabla {
     <script>
-        PrintarTabla();
+        $(document).ready(PrintarTabla("#tablaContainer"));
 
     </script>
 

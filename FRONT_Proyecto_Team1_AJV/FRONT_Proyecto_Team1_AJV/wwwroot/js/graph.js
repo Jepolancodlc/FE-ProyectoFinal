@@ -321,17 +321,6 @@ function getKendoCharts() {
         }
     ];
 
-    let generoTrabajadores = [
-        {
-        "genero": "Masculino",
-        "porcentaje": 42
-        },
-        {
-        "genero": "Femenino",
-        "porcentaje": 58
-        }
-    ];
-
     let horasTrabajadores = [{
         name: "Horas por Contrato",
         data: [120, 115, 123, 125, 120, 110, 50, 112, 123],
@@ -347,16 +336,16 @@ function getKendoCharts() {
     lineChart(superavitDepartamentoAnual, "#lineChart");
     treeChart(presupuestoDepartamentoAnual, "#treeChart");
     radarChart(gastoDepartamentos, "#radarChart");
-    donutChart(generoTrabajadores, "#donutChart");
-    columnChart(horasTrabajadores, "#columnChart")
+    columnChart(horasTrabajadores, "#columnChart");
    
-    ///////////////////////////////////////////////////////////////////////////////
-    //// Revisamos si está guardado el GET de la BD, si lo está, lo borramos y lo volvemos a llamar para actualizar los datos
-    //if (localStorage.getItem("data") != null) {
-    //    localStorage.removeItem("data"); // borramos la data
-    //}
-    //GetTabla(); // llamamos al get para volver a guardar la data actualizada
-    //let data = JSON.parse(localStorage.getItem("data")); // la asignamos a una variable para trabajar con ella
+    /////////////////////////// CHARTS CREADOS CON DATOS DE LA BASE DE DATOS //////////////////////////////////////////////////
+    GetPoblacionChart(); // llamamos al get para volver a guardar la data actualizada
+    let dataPoblacion = JSON.parse(localStorage.getItem("poblacion")); // la asignamos a una variable para trabajar con ella
+    poblacionChart(dataPoblacion, "#poblacionChart");
+
+    GetGeneroChart();
+    let dataGenero = JSON.parse(localStorage.getItem("genero"));
+    donutChart(dataGenero, "#donutChart");
 
 }
 
@@ -553,7 +542,7 @@ function radarChart(data, loc) {
 function donutChart(data, loc) {
     $(loc).kendoChart({
         title: {
-            text: "Genero Trabajadores"
+            text: "Sexo de los Trabajadores"
         },
         legend: {
             position: "top"
@@ -566,13 +555,13 @@ function donutChart(data, loc) {
             startAngle: 150
         },
         series: [{
-            field: "porcentaje",
-            categoryField: "genero"
+            field: "Cantidad",
+            categoryField: "Genero"
         }],
         seriesColors: ["#ffd34a", "#ff776e"],
         tooltip: {
             visible: true,
-            template: "${ category } - ${ value }%"
+            template: "${ category } - Nº ${ value }"
         }
     });
 }
@@ -613,6 +602,32 @@ function columnChart(data, loc) {
     });
 }
 
+function poblacionChart(data, loc) {
+    $(loc).kendoChart({
+        title: {
+            text: "Población Trabajadores"
+        },
+        legend: {
+            position: "top"
+        },
+        dataSource: {
+            data: data
+        },
+        seriesDefaults: {
+            type: "donut",
+            startAngle: 150
+        },
+        series: [{
+            field: "Coincidencias",
+            categoryField: "D_Poblacion"
+        }],
+        tooltip: {
+            visible: true,
+            template: "${ category } - Nº ${ value }"
+        }
+    });
+}
+
 //function GetTabla() {
 //    // Función para el GET de la API a Trabajadores. Guarda el json devuelto en una variable en memoria llamada 'data'.
 //    $.ajax(
@@ -637,25 +652,48 @@ function columnChart(data, loc) {
 //}
 
 
-//function GetPoblacionChart() {
-//    // Función para el GET de la API a Trabajadores/Poblacion. Guarda el json devuelto en una variable en memoria llamada 'poblacion'.
-//    $.ajax(
-//        {
-//            url: "https://localhost:44304/api/Trabajadores/Poblacion",
-//            method: 'GET',
-//            dataType: 'json',
-//            headers: {
-//                'Accept': 'application/json',
-//                'Authorization': localStorage.getItem('token') /* Recogemos el token guardado en memoria (se llama a guardar en index.cshtml) */
-//            },
-//            contentType: 'application/json',
+function GetPoblacionChart() {
+    // Función para el GET de la API a Trabajadores/Poblacion. Guarda el json devuelto en una variable en memoria llamada 'poblacion'.
+    $.ajax(
+        {
+            url: "https://localhost:44304/api/Trabajadores/Poblacion",
+            method: 'GET',
+            dataType: 'json',
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': localStorage.getItem('token') /* Recogemos el token guardado en memoria (se llama a guardar en index.cshtml) */
+            },
+            contentType: 'application/json',
 
-//            success: function (poblacion) {
-//                localStorage.setItem("poblacion", JSON.stringify(poblacion)); /* guardamos el json en memoria */
-//            },
-//            error: function (error) {
-//                console.log(error);
-//            }
-//        }
-//    );
-//}
+            success: function (poblacion) {
+                localStorage.setItem("poblacion", poblacion); /* guardamos el json en memoria */
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        }
+    );
+}
+
+function GetGeneroChart() {
+    // Función para el GET de la API a Trabajadores/Genero. Guarda el json devuelto en una variable en memoria llamada 'genero'.
+    $.ajax(
+        {
+            url: "https://localhost:44304/api/Trabajadores/Genero",
+            method: 'GET',
+            dataType: 'json',
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': localStorage.getItem('token') /* Recogemos el token guardado en memoria (se llama a guardar en index.cshtml) */
+            },
+            contentType: 'application/json',
+
+            success: function (genero) {
+                localStorage.setItem("genero", genero); /* guardamos el json en memoria */
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        }
+    );
+}
