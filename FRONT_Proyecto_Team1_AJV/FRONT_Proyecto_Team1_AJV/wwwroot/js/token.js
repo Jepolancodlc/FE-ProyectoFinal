@@ -7,7 +7,7 @@ function CallToken(user, password) {
 
     // Función para guardar el token con el user y pass pasado por parámetro
     $.ajax({
-        url: "https://localhost:44304/api/TokenUsers",
+        url: "https://localhost:44326/api/TokenUsers",
         method: 'POST',
         dataType: 'json',
         headers: {

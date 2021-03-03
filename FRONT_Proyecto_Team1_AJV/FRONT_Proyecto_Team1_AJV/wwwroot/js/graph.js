@@ -4,11 +4,14 @@
 // Write your JavaScript code.
 
 
-function getKendoCharts() {
+function getKendoCharts(loc) {
     /*
      * Función para printar varios gráficos por pantalla formatados dentro de divs.
      * También tiene los arrays con la data para los diversos charts. Llama a las funciones para cada chart.
      */
+
+    $(loc).empty(); // eliminamos el contenido del containerScreen
+    addDivs(loc); // insertamos los divs para los gráficos
 
     // DATA PARA LOS CHARTS
     let productividadAnual = [
@@ -346,9 +349,20 @@ function getKendoCharts() {
     GetGeneroChart();
     let dataGenero = JSON.parse(localStorage.getItem("genero"));
     donutChart(dataGenero, "#donutChart");
-
 }
 
+function addDivs(loc) {
+
+    $(loc).append("<div id='areaChart' class='graph'></div>" +
+        "<div id='pieChart' class='graph'></div>"+
+        "<div id='lineChart' class='graph'></div>"+
+        "<div id='radarChart' class='graph'></div>"+
+        "<div id='donutChart' class='graph'></div>"+
+        "<div id='columnChart' class='graph'></div>"+
+        "<div id='treeChart' class='graphGrande'></div>"+
+        "<div id='poblacionChart' class='graphGrande'></div>"
+    );
+}
 
 
 function areaChart(data, loc) {
@@ -628,35 +642,12 @@ function poblacionChart(data, loc) {
     });
 }
 
-//function GetTabla() {
-//    // Función para el GET de la API a Trabajadores. Guarda el json devuelto en una variable en memoria llamada 'data'.
-//    $.ajax(
-//        {
-//            url: "https://localhost:44304/api/Trabajadores",
-//            method: 'GET',
-//            dataType: 'json',
-//            headers: {
-//                'Accept': 'application/json',
-//                'Authorization': localStorage.getItem('token') /* Recogemos el token guardado en memoria (se llama a guardar en index.cshtml) */
-//            },
-//            contentType: 'application/json',
-
-//            success: function (data) {
-//                localStorage.setItem("data", JSON.stringify(data)); /* guardamos el json en memoria */
-//            },
-//            error: function (error) {
-//                console.log(error);
-//            }
-//        }
-//    );
-//}
-
 
 function GetPoblacionChart() {
     // Función para el GET de la API a Trabajadores/Poblacion. Guarda el json devuelto en una variable en memoria llamada 'poblacion'.
     $.ajax(
         {
-            url: "https://localhost:44304/api/Trabajadores/Poblacion",
+            url: "https://localhost:44326/api/Trabajadores/Poblacion",
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -679,7 +670,7 @@ function GetGeneroChart() {
     // Función para el GET de la API a Trabajadores/Genero. Guarda el json devuelto en una variable en memoria llamada 'genero'.
     $.ajax(
         {
-            url: "https://localhost:44304/api/Trabajadores/Genero",
+            url: "https://localhost:44326/api/Trabajadores/Genero",
             method: 'GET',
             dataType: 'json',
             headers: {

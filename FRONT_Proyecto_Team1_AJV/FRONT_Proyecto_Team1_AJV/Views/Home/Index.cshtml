@@ -6,31 +6,54 @@
     }
     <!-- FIN DE TOKEN -->
 </div>
-
-<!-- Sidebar -->
-<div class="col-auto col1" id="col1">
-    <div class="icon-bar">
-        <a href="#"><i class="fa fa-home"></i></a>
-        <a href="#" class="active"><i class="fa fa-search"></i> <label class="lblNames">Juan</label> </a>
-        <a href="#"><i class="fa fa-envelope"></i> <label class="lblNames">Juan</label> </a>
-        <a href="#"><i class="fa fa-globe"></i> <label class="lblNames">Juan</label> </a>
-        <a href="#"><i class="fa fa-search"></i><label class="lblNames">Juan</label> </a>
-        <a href="#"><i class="fa fa-envelope"></i><label class="lblNames">Juan</label> </a>
-        <a href="#"><i class="fa fa-globe"></i><label class="lblNames">Juan</label> </a>
-    </div>
-    <button type="button" id="btnHide" onclick="hideSideBar()"> <i class="fas fa-chevron-right"></i></button>
-</div>
-
 <!-- Main -->
-<div id="menus" class="col col2">
+<!-- Sidebar -->
+<div class="col-sm-auto colSideBar" id="colSideBar">
+    <div>
+        <div class="icon-bar">
+            <i id="logo" class="fa fa-home"></i>
+            <a href="#" class="active">
+                <i class="bi bi-person-fill"></i>
+                <label class="lblNames">Trabajadores</label>
+            </a>
+            <a href="#">
+                <i class="bi bi-tag"></i>
+                <label class="lblNames">Etiquetas</label>
+            </a>
+            <a href="#a">
+                <i class="bi bi-display"></i>
+                <label class="lblNames">Vistas</label>
+            </a>
+            <a href="#b">
+                <i class="bi bi-bag"></i>
+                <label class="lblNames">Trabajo</label>
+            </a>
+            <a href="#c">
+                <i class="bi bi-tag-fill"></i>
+                <label class="lblNames">CE</label>
+            </a>
+            <a href="#">
+                <i class="bi bi-diagram-3-fill"></i>
+                <label class="lblNames">Organigrama</label>
+            </a>
+            <a href="#">
+                <i class="bi bi-graph-up"></i>
+                <label class="lblNames">Estadisticas</label>
+            </a>
+            <button type="button" id="btnHide" onclick="ocultaSBnombres()"> <i class="fas fa-chevron-right"></i></button>
+
+        </div>
+    </div>
+</div>
+<div class="col-sm col2">
     <!-- Menu Horizontal -->
-    <div id="menuHorizontal" class="row">
-        <div class="col colhor">
-            <button class="btnNav" onclick="myFunction2()"><i id="ico" class="fas fa-bars"></i></button>
+    <div class="row">
+        <div class="col colhor ">
+            <button class="btnNav" onclick="ocultarMenuFiltros()"><i id="ico" class="fas fa-bars"></i></button>
             <label> Trabajadores </label>
             <div id="secbtn">
-                <button class="btnDis" disabled>
-                    <i class="bi bi-calendar-event"></i> <div id="fecha"></div>
+                <button class="btnDis" disabled id="fecha">
+                    <i class="bi bi-calendar-event"></i>
                 </button>
                 <button class="btnDis" disabled>
                     <i class="bi bi-diagram-3-fill"></i> Grupo Castilla (No
@@ -39,23 +62,38 @@
             </div>
         </div>
     </div>
-
-
-    <div id="menuVertical" class="row h-100">
+    <div class="row vh-100">
         <!-- Menu Filtros -->
-        <div class="col-auto cola h-100" id="cola">
-            <ul>
-                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
-                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
-                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
-                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
-                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
-                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
-                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
-                <li><button type="button" class="btn btn-primary btn-lg">Large button</button></li>
-            </ul>
+        <div class="col-2" id="colMenuFiltros">
+            <div class="MenuFiltros">
+                <div class="input-group rounded">
+                    <!-- INPUT de filtros -->
+                    <input type="search" class="form-control rounded" placeholder="Filtrar unidad organizativa" aria-label="Search"
+                           aria-describedby="search-addon" />
+                    <button id="btnFilter" type="button" class="btn btn-primary">
+                        <i onclick="activarFiltros('#containerScreen')"class="bi bi-funnel-fill"></i>
+                    </button>
+                </div>
+
+                <!-- Casillas de las unidades organizativas -->
+                <div class="input-group rounded">
+                    <label id="btnDepartamentos" type="button" class="btn btn-lg btnOrganizativa">
+                        <i onclick="PrintarTabla('#containerScreen');">Ayuntamiento</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up"></i>
+                    </label>
+                </div>
+                <div id="footerFiltros">
+                    <a href="#home">
+                        <i class="bi bi-question-diamond-fill"></i>
+                    </a>
+                    <a href="#about">
+                        <i class="bi bi-globe2"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- Tabla y Gráficos -->
-        <div id="containerContenido" class="col colb">.col-sm-8</div>
+
+        <!-- Tabla -->
+        <div id="containerScreen" class="col-10 colb"></div>
     </div>
 </div>

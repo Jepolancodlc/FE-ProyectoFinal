@@ -39,7 +39,7 @@ namespace API_Proyecto_Team1_AJV.Controllers
             t => new TablaTrabajadoresDto
             {
                 Id_Trabajador = t.Id,
-                FotoUrl = "",
+                FotoUrl = "../img/"+t.Id+".jpg",
                 Nombre = t.Nombre + " " + t.Apellido1 + " " + t.Apellido2,
                 Email = t.Email,
                 Empresa = t.NivOrg.Organig.Empresas.DEmpresa,
@@ -56,39 +56,18 @@ namespace API_Proyecto_Team1_AJV.Controllers
             _context = context;
         }
 
+        /*
+         *  DTOs
+         * 
+         */
+
         // GET: api/Trabajadores
         // GET TRABAJADORES PERSONALIZADO CON DTO PARA QUE NOS MUESTRE SÓLO LAS COLUMNAS DESEADAS
         [HttpGet]
         public IQueryable<TablaTrabajadoresDto> GetTablaTrabajadores()
         {
-            return _context.Trabajadores.Select(AsTablaDto); 
+            return _context.Trabajadores.Select(AsTablaDto);
         }
-
-        //// GET: api/Trabajadores
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<Trabajadores>>> GetTrabajadores()
-        //{
-        //    return await _context.Trabajadores.ToListAsync();
-        //}
-
-        //// GET: api/Trabajadores/5
-        //[HttpGet("{id}")]
-        //public async Task<ActionResult<Trabajadores>> GetTrabajadores(string id)
-        //{
-        //    var trabajadores = await _context.Trabajadores.FindAsync(id);
-
-        //    if (trabajadores == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return trabajadores;
-        //}
-
-        /*
-         *  DTOs
-         * 
-         */
 
         //GET api/Trabajadores/Poblacion
         // obtiene los nombres de las poblaciones de cada trabajador y el número de repeticiones para los gráficos

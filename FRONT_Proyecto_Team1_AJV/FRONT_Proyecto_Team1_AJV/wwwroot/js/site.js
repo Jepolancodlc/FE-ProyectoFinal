@@ -3,8 +3,9 @@
 
 // Write your JavaScript code.
 
-function myFunction() {
-    let x = document.getElementById("col1");
+function ocultarSidebar() {
+    // OCULTA/MUESTRA EL SIDEBAR
+    let x = document.getElementById("colSideBar");
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -12,8 +13,9 @@ function myFunction() {
     }
 }
 
-function myFunction2() {
-    let x = document.getElementById("cola");
+function ocultarMenuFiltros() {
+    // OCULTA/MUESTRA EL MENU DE FILTROS
+    let x = document.getElementById("colMenuFiltros");
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -22,7 +24,9 @@ function myFunction2() {
 }
 
 
-function hideSideBar() {
+
+function ocultaSBnombres() {
+    // OCULTA/MUESTRA LOS NOMBRES DEL SIDEBAR
     let elements = document.getElementsByClassName("lblNames");
 
     for (let i = 0; i < elements.length; i++) {
@@ -38,8 +42,34 @@ function hideSideBar() {
 }
 
 function fecha() {
+    // MUESTRA LA FECHA DEL PC
     let meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
     let f = new Date();
     $("#fecha").html(`${f.getDate()} ${meses[f.getMonth()]} ${f.getFullYear()}`);
 }
 fecha();
+
+function activarFiltros(loc) {
+    // BOTÓN PARA ACTIVAR/DESACTIVAR LOS FILTROS DE LA TABLA
+    if ($(loc).kendoGrid.filterable == true) {
+        $(loc).kendoGrid({
+            navigatable: false,
+            resizable: false,
+            reorderable: false,
+            groupable: false,
+            filterable: false
+        });
+        $(loc).removeClass("k-widget");
+    }
+    else {
+        $(loc).kendoGrid({
+            navigatable: true,
+            resizable: true,
+            reorderable: true,
+            groupable: true,
+            filterable: true
+        });
+        $(loc).removeClass("k-widget");
+    }
+    $(loc).removeClass("k-widget");
+}

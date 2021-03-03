@@ -6,13 +6,14 @@
 
 // Función para construir la tabla según las tuplas de Productos
 function PrintarTabla(loc) {
-    GetTabla(loc);
+    $(loc).empty(); // eliminamos el contenido de containerScreen
+    GetTabla(loc); // llamamos al get para printar la tabla
 }
 
 function GetTabla(loc) {
     $.ajax(
         {
-            url: "https://localhost:44304/api/Trabajadores",
+            url: "https://localhost:44326/api/Trabajadores",
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -37,20 +38,41 @@ function GetTabla(loc) {
                                 cuerpo: { type: "string" },
                                 categoria: { type: "string" },
                                 tProvis: { type: "string" },
-                                sitAdmin: { type: "string" },
+                                sitAdmin: { type: "string" }
                             }
                         }
                     },
-                    pageSize: 10,
+                    pageSize: 12,
                     sort: {
-                        field: "id",
+                        field: "id_Trabajador",
                         dir: "asc"
                     }
                 });
+
                 $(loc).kendoGrid({
-                    sortable: true, pageable: true,
+                    sortable: true,
+                    pageable: true,
+                    navigatable: false,
+                    resizable: false,
+                    reorderable: false,
+                    groupable: false,
+                    filterable: false,
+                    columns: [
+                        { field: "id_Trabajador", title: "ID", width: "80px"  },
+                        { template: "<img src='#:fotoUrl#' style='width:80px;height:50px;border-radius: 20%;' />", title: "Img"},
+                        { field: "nombre", title: "Nombre" },
+                        { field: "email", title: "Email" },
+                        { field: "empresa", title: "Empresa" },
+                        { field: "telefono", title: "Teléfono" },
+                        { field: "grupo", title: "Grupo", width: "120px" },
+                        { field: "cuerpo", title: "Cuerpo" },
+                        { field: "categoria", title: "Categoría" },
+                        { field: "tProvis", title: "Tipo Contrato" },
+                        { field: "sitAdmin", title: "Sitio Administrativo" }
+                    ],
                     dataSource: gridDataSource
                 });
+                $(loc).removeClass("k-widget");
             },
             error: function (error) {
                 console.log(error);
