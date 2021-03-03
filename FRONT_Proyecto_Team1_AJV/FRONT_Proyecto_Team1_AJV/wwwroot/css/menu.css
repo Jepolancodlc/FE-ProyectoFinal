@@ -1,1 +1,80 @@
 ﻿
+/* MENU */
+
+/* Barra horizontal */
+.colhor {
+    background-color: white;
+    border-bottom: 1px solid gray;
+}
+
+#ico {
+    margin-top: 7px;
+    font-size: 20px;
+}
+
+#secbtn {
+    float: right;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.btnDis {
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: cornflowerblue;
+    border-style: solid;
+}
+
+/* Menu Desplegable de filtros */
+#btnDepartamentos {
+    display: block;
+    margin-top: 3px;
+    width: 100%;
+    min-height: 50px;
+}
+
+.btnMenu {
+    font-style: inherit;
+    font-size: larger;
+}
+
+.form-control {
+    background-color: transparent;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+.bi-funnel-fill, #btnFilter {
+    background-color: transparent;
+    color: #005ab7;
+    border-style: none;
+}
+
+#footerFiltros {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    color: #005ab7;
+    background-color: transparent;
+    text-decoration: none;
+    width: 100%;
+    height: 9%;
+    background-color: #efefef;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.btnOrganizativa {
+    background-color: white;
+    color: #005ab7;
+}
+
+.btnOrganizativaActive {
+    background-color: #b2cdea;
+    color: #005ab7;
+}

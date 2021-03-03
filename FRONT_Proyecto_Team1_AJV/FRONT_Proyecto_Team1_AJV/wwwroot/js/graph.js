@@ -303,7 +303,7 @@ function getKendoCharts(loc) {
             "euros": 2800
         },
         {
-            "gasto": "Gasto Energético",
+            "gasto": "Gasto \n Energético",
             "euros": 3500
         },
         {
@@ -353,17 +353,18 @@ function getKendoCharts(loc) {
 
 function addDivs(loc) {
 
-    $(loc).append("<div id='areaChart' class='graph'></div>" +
-        "<div id='pieChart' class='graph'></div>"+
-        "<div id='lineChart' class='graph'></div>"+
-        "<div id='radarChart' class='graph'></div>"+
-        "<div id='donutChart' class='graph'></div>"+
-        "<div id='columnChart' class='graph'></div>"+
-        "<div id='treeChart' class='graphGrande'></div>"+
-        "<div id='poblacionChart' class='graphGrande'></div>"
+    $(loc).append("<div id='contentCharts' class='row d-flex justify-content-center'>"+
+        "<div id='areaChart' class='graph'></div>" +
+        "<div id='pieChart' class='itemGraph graph'></div>"+
+        "<div id='lineChart' class='itemGraph graph'></div>"+
+        "<div id='radarChart' class='itemGraph graph'></div>"+
+        "<div id='donutChart' class='itemGraph graph'></div>"+
+        "<div id='columnChart' class='itemGraph graph'></div>"+
+        "<div id='treeChart' class='itemGraph graphGrande'></div>"+
+        "<div id='poblacionChart' class='itemGraph graphGrande'></div>"+
+        "</div>"
     );
 }
-
 
 function areaChart(data, loc) {
     $(loc).kendoChart({
@@ -440,7 +441,7 @@ function lineChart(data, loc) {
             data: data
         },
         title: {
-            text: "Gastos por departamento respecto al presupuesto total anual"
+            text: "Gastos por departamento \n respecto al presupuesto total anual"
         },
         legend: {
             position: "top"
