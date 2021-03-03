@@ -11,34 +11,34 @@
 <div class="col-sm-auto colSideBar" id="colSideBar">
     <div>
         <div class="icon-bar">
-            <i id="logo" class="fa fa-home"></i>
+            <img id="logo" src="~/img/logo.jpg" width="70" />
             <a href="#" class="active">
                 <i class="bi bi-person-fill"></i>
-                <label class="lblNames">Trabajadores</label>
+                <label class="lblNames" style="display: none;">Trabajadores</label>
             </a>
             <a href="#">
                 <i class="bi bi-tag"></i>
-                <label class="lblNames">Etiquetas</label>
+                <label class="lblNames" style="display: none;">Etiquetas</label>
             </a>
             <a href="#a">
                 <i class="bi bi-display"></i>
-                <label class="lblNames">Vistas</label>
+                <label class="lblNames" style="display: none;">Vistas</label>
             </a>
             <a href="#b">
                 <i class="bi bi-bag"></i>
-                <label class="lblNames">Trabajo</label>
+                <label class="lblNames" style="display: none;">Trabajo</label>
             </a>
             <a href="#c">
                 <i class="bi bi-tag-fill"></i>
-                <label class="lblNames">CE</label>
+                <label class="lblNames" style="display: none;">CE</label>
             </a>
             <a href="#">
                 <i class="bi bi-diagram-3-fill"></i>
-                <label class="lblNames">Organigrama</label>
+                <label class="lblNames" style="display: none;">Organigrama</label>
             </a>
             <a href="#">
                 <i class="bi bi-graph-up"></i>
-                <label class="lblNames">Estadisticas</label>
+                <label class="lblNames" style="display: none;">Estadísticas</label>
             </a>
             <button type="button" id="btnHide" onclick="ocultaSBnombres()"> <i class="fas fa-chevron-right"></i></button>
 
@@ -76,12 +76,10 @@
                 </div>
 
                 <!-- Casillas de las unidades organizativas -->
-                <div class="input-group rounded">
-                    <label id="btnDepartamentos" type="button" class="btn btn-lg btnOrganizativa">
-                        <i onclick="PrintarTabla('#containerScreen');">Ayuntamiento</i>
-                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up"></i>
-                    </label>
-                </div>
+                <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Ayuntamiento</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                </button>
                 <div id="footerFiltros">
                     <a href="#home">
                         <i class="bi bi-question-diamond-fill"></i>
@@ -92,8 +90,7 @@
                 </div>
             </div>
         </div>
-
         <!-- Tabla -->
-        <div id="containerScreen" class="col-10 colb"></div>
+        <div id="containerScreen" class="col-10 colb containerScreen vh-100"></div>
     </div>
 </div>

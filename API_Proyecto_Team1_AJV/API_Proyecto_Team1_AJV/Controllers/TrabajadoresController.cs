@@ -43,10 +43,10 @@ namespace API_Proyecto_Team1_AJV.Controllers
                 Nombre = t.Nombre + " " + t.Apellido1 + " " + t.Apellido2,
                 Email = t.Email,
                 Empresa = t.NivOrg.Organig.Empresas.DEmpresa,
-                Telefono = t.Telefono1 + " ; " + t.Telefono2,
+                Telefono = t.Telefono1 + " " + t.Telefono2,
                 Grupo = t.Grupo,
-                Cuerpo = t.CuerpoNavigation.Cuerpo,
-                Categoria = t.IdCategoriaNavigation.Categori,
+                Cuerpo = t.CuerpoNavigation.Descrip,
+                Categoria = t.IdCategoriaNavigation.Descrip,
                 TProvis = t.TProvis,
                 SitAdmin = t.SitAdmv
             };
