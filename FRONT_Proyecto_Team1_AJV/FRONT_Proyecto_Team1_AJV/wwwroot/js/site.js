@@ -3,24 +3,40 @@
 
 // Write your JavaScript code.
 
-function ocultarSidebar() {
-    // OCULTA/MUESTRA EL SIDEBAR
-    let x = document.getElementById("colSideBar");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
+$(document).ready(function () {
+    // MUESTRA/OCULTA EL SIDEBAR
+    $("#NavBtn1").click(function () {
+        $("#colSideBar").toggle();
+    });
 
-function fecha() {
+});
+
+$(document).ready(function () {
     // MUESTRA LA FECHA DEL PC
     let meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
     let f = new Date();
     $("#fecha").html(`${f.getDate()} ${meses[f.getMonth()]} ${f.getFullYear()}`);
-}
-fecha();
+});
 
 function activarFiltros(loc) {
     // BOTÓN PARA ACTIVAR/DESACTIVAR LOS FILTROS DE LA TABLA
 }
+
+$(document).ready(function () {
+    // FILTRO INPUT
+    $("#buscador").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#grupoBoton button").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+
+
+$(document).ready(function () {
+    // ORDENA DE MANERA ASCENDENTE LOS BOTONES DE LA COLUMNA DE FILTROS
+    $("#grupoBoton button").sort(sort_ascending).appendTo('#grupoBoton');
+    function sort_ascending(a, b) {
+        return ($(b).text()) < ($(a).text()) ? 1 : -1;
+    }
+});

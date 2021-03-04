@@ -1,6 +1,7 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -8,6 +9,20 @@ a.navbar-brand {
 }
 
 /* Provide sufficient contrast against white background */
+#itemNav {
+    flex-direction: row !important;
+    
+}
+
+
+#itemNav a, #itemNav li button, #itemNav li {
+    color: white !important;
+    font-size: 19px !important;
+    height: 10px !important;
+    padding-top: inherit;
+    margin-bottom: 15px;
+}
+    
 a {
     color: #0366d6;
 }
@@ -45,9 +60,9 @@ body {
 }
 
 .nav li {
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 12px;
+    padding-right: 10px;
+    margin-bottom: 0;
 }
 
 .headerICO{
@@ -70,7 +85,10 @@ body {
     color: white;
 }
 
-
+#footerFiltros a {
+    padding-right: 25px;
+    text-decoration: none;
+}
 /* tabla */
 .colb {
     border: 1px solid gray;
@@ -130,3 +148,4 @@ body {
     color: #fff;
     background-color: #005AB7 !important;
 }
+

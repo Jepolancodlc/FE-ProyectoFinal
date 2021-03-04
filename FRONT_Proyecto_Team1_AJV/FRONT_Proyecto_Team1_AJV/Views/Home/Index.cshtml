@@ -8,7 +8,7 @@
 </div>
 <!-- Main -->
 <!-- Sidebar -->
-<div class="col-sm-auto colSideBar" id="colSideBar">
+<div class="col-sm-auto" id="colSideBar">
     <div>
         <div class="icon-bar">
             <img id="logo" src="~/img/logo.jpg" width="70" />
@@ -40,7 +40,7 @@
                 <i class="bi bi-graph-up"></i>
                 <label class="lblNames" style="display: none;">Estadísticas</label>
             </a>
-            <button type="button" id="btnHide" onclick="ocultaSBnombres()"> <i class="fas fa-chevron-right"></i></button>
+            <button type="button" id="btnHide" > <i class="fas fa-chevron-right"></i></button>
 
         </div>
     </div>
@@ -49,7 +49,7 @@
     <!-- Menu Horizontal -->
     <div class="row">
         <div class="col colhor ">
-            <button class="btnNav" onclick="ocultarMenuFiltros()"><i id="ico" class="fas fa-bars"></i></button>
+            <button class="btnNav"><i id="ico" class="fas fa-bars"></i></button>
             <label> Trabajadores </label>
             <div id="secbtn">
                 <button class="btnDis" disabled id="fecha">
@@ -68,18 +68,47 @@
             <div class="MenuFiltros">
                 <div class="input-group rounded">
                     <!-- INPUT de filtros -->
-                    <input type="search" class="form-control rounded" placeholder="Filtrar unidad organizativa" aria-label="Search"
+                    <input id="buscador" type="search" class="form-control rounded" placeholder="Filtrar unidad organizativa" aria-label="Search"
                            aria-describedby="search-addon" />
                     <button id="btnFilter" type="button" class="btn btn-primary">
-                        <i onclick="activarFiltros('#containerScreen')"class="bi bi-funnel-fill"></i>
+                        <i onclick="activarFiltros('#containerScreen')" class="bi bi-funnel-fill"></i>
                     </button>
                 </div>
 
                 <!-- Casillas de las unidades organizativas -->
-                <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                <div id="grupoBoton">
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
                         <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Ayuntamiento</i>
                         <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
-                </button>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Financias</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Marketing</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">RRHH</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">I+D</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">I+A</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                </div>
+
                 <div id="footerFiltros">
                     <a href="#home">
                         <i class="bi bi-question-diamond-fill"></i>

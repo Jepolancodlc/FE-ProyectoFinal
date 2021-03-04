@@ -22,32 +22,21 @@
     <header>
         <div>
             <nav id="header" class="navbar navbar-light bg-light">
-                <button id="NavBtn1" class="btnNav" onclick="ocultarSidebar()"><i class="fas fa-bars"></i></button>
+                <button id="NavBtn1" class="btnNav"><i class="fas fa-bars"></i></button>
                 <div class="nav">
-                    <a href="#home">
-                        <i class="bi bi-fullscreen headerICO"></i>
-                    </a>
-                    <a href="#about">
-                        <i class="bi bi-bell-fill headerICO"></i>
-                    </a>
-                    <a href="#clients">
-                        <i class="bi bi-globe2 headerICO"></i>
-                    </a>
-                    <a href="#clients">
-                        <i class="bi bi-person-circle headerICO"></i>
-                    </a>
-                    <a href="#contact">
-                        <i class="bi bi-grid-3x3-gap-fill headerICO"></i>
-                    </a>
+                     @* Habria que editar el estilo de: *@
+                     <partial name="_LoginPartial"/>
                 </div>
             </nav>
         </div>
     </header>
+
     <div id="container" class="container-fluid">
         <div id="rowContainer" class="row vh-100">
             @RenderBody()
         </div>
     </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
