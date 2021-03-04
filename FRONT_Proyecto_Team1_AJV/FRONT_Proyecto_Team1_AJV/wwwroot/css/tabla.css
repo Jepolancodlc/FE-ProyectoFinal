@@ -10,3 +10,7 @@
     color: #fff;
     background-color: #005AB7 !important;
 }
+#containerScreen {
+    overflow: scroll;
+}
+

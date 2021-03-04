@@ -12,7 +12,7 @@ namespace API_Proyecto_Team1_AJV.DTOs
          */
 
         // ATRIBUTOS, GETTERS Y SETTERS
-        public string Genero { get; set; }
+        public string Sexo { get; set; }
         public int Cantidad { get; set; }
 
     }

@@ -64,9 +64,9 @@ function GetTabla(loc) {
                         { field: "nombre", title: "Nombre" },
                         { field: "email", title: "Email" },
                         { field: "empresa", title: "Empresa" },
-                        { field: "niv_Org", title: "Empleo" },
+                        { field: "niv_Org", title: "Nivel Organizativo" },
                         { field: "telefono", title: "Teléfono" },
-                        { field: "cuerpo", title: "Cuerpo" },
+                        { field: "cuerpo", title: "Cuerpo", width: "180px"},
                         { field: "categoria", title: "Categoría" },
                         { template: "<label style='background-color:grey;color:white;width:40px;height:30px;border-radius: 100%;text-align: center;font-weight: bold;' > #:tProvis#</label>", field: "tProvis", title: "Tipo Contrato" },
                         { template: "<label style='background-color:green;color:white;width:40px;height:30px;border-radius: 100%;text-align: center;font-weight: bold;' > #:sitAdmin#</label>", field: "sitAdmin", title: "Sitio Administrativo" },
@@ -87,7 +87,7 @@ function GetTabla(loc) {
 function GetTablaID(loc, niv_org) {
     $.ajax(
         {
-            url: "https://localhost:44326/api/Trabajadores/" + niv_org,
+            url: "https://localhost:44326/api/Trabajadores/" + encodeURIComponent(niv_org),
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -139,9 +139,9 @@ function GetTablaID(loc, niv_org) {
                         { field: "nombre", title: "Nombre" },
                         { field: "email", title: "Email" },
                         { field: "empresa", title: "Empresa" },
-                        { field: "niv_Org", title: "Empleo" },
+                        { field: "niv_Org", title: "Nivel Organizativo" },
                         { field: "telefono", title: "Teléfono" },
-                        { field: "cuerpo", title: "Cuerpo" },
+                        { field: "cuerpo", title: "Cuerpo", width: "180x"},
                         { field: "categoria", title: "Categoría" },
                         { template: "<label style='background-color:grey;color:white;width:40px;height:30px;border-radius: 100%;text-align: center;font-weight: bold;' > #:tProvis#</label>", field: "tProvis", title: "Tipo Contrato" },
                         { template: "<label style='background-color:green;color:white;width:40px;height:30px;border-radius: 100%;text-align: center;font-weight: bold;' > #:sitAdmin#</label>", field: "sitAdmin", title: "Sitio Administrativo" },

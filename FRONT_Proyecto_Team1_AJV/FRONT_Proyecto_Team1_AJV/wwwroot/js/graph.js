@@ -348,11 +348,12 @@ function getKendoCharts(loc) {
 
     GetGeneroChart();
     let dataGenero = JSON.parse(localStorage.getItem("genero"));
-    donutChart(dataGenero, "#donutChart");
+    generoChart(dataGenero, "#donutChart");
 }
 
-function addDivs(loc) {
 
+function addDivs(loc) {
+    // FUNCIÓN PARA AÑADIR LA ESTRUCTURA DE DIVS PARA LOS GRÁFICOS DE AYUNTAMOIENTOS
     $(loc).append("<div id='contentCharts' class='row d-flex justify-content-center'>"+
         "<div id='areaChart' class='graph'></div>" +
         "<div id='pieChart' class='itemGraph graph'></div>"+
@@ -366,6 +367,36 @@ function addDivs(loc) {
     );
 }
 
+function getKendoChartsID(loc, filtro) {
+    /*
+     * Función para printar varios gráficos por pantalla formatados dentro de divs.
+     * También tiene los arrays con la data para los diversos charts. Llama a las funciones para cada chart.
+     */
+
+    $(loc).empty(); // eliminamos el contenido del containerScreen
+    addDivsID(loc); // insertamos los divs para los gráficos
+
+    /////////////////////////// CHARTS CREADOS CON DATOS DE LA BASE DE DATOS //////////////////////////////////////////////////
+   
+    GetPoblacionChartID(filtro); // llamamos al get para volver a guardar la data actualizada
+    let dataPoblacion = JSON.parse(localStorage.getItem("poblacionID" + filtro)); // la asignamos a una variable para trabajar con ella
+    poblacionChart(dataPoblacion, "#poblacionChart");
+
+    GetGeneroChartID(filtro);
+    let dataGenero = JSON.parse(localStorage.getItem("generoID" + filtro));
+    generoChart(dataGenero, "#donutChart");
+}
+
+function addDivsID(loc) {
+    // FUNCIÓN PARA AÑADIR LA ESTRUCTURA DE DIVS PARA LOS GRÁFICOS DE AYUNTAMOIENTOS
+    $(loc).append("<div id='contentCharts' class='row d-flex justify-content-center'>" +
+        "<div id='donutChart' class='itemGraph graph'></div>" +
+        "<div id='poblacionChart' class='itemGraph graphGrande'></div>" +
+        "</div>"
+    );
+}
+
+/* FUNCIONES PARA CREAR CHARTS */
 function areaChart(data, loc) {
     $(loc).kendoChart({
         dataSource: {
@@ -554,7 +585,7 @@ function radarChart(data, loc) {
     });
 }
 
-function donutChart(data, loc) {
+function generoChart(data, loc) {
     $(loc).kendoChart({
         title: {
             text: "Sexo de los Trabajadores"
@@ -566,12 +597,12 @@ function donutChart(data, loc) {
             data: data
         },
         seriesDefaults: {
-            type: "donut",
+            type: "pie",
             startAngle: 150
         },
         series: [{
             field: "Cantidad",
-            categoryField: "Genero"
+            categoryField: "Sexo"
         }],
         seriesColors: ["#ffd34a", "#ff776e"],
         tooltip: {
@@ -643,7 +674,6 @@ function poblacionChart(data, loc) {
     });
 }
 
-
 function GetPoblacionChart() {
     // Función para el GET de la API a Trabajadores/Poblacion. Guarda el json devuelto en una variable en memoria llamada 'poblacion'.
     $.ajax(
@@ -682,6 +712,54 @@ function GetGeneroChart() {
 
             success: function (genero) {
                 localStorage.setItem("genero", genero); /* guardamos el json en memoria */
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        }
+    );
+}
+
+
+/* FUNCIONES GETTERS PARA LOS CHARTS */
+function GetPoblacionChartID(filtro) {
+    // Función para el GET de la API a Trabajadores/Poblacion. Guarda el json devuelto en una variable en memoria llamada 'poblacion'.
+    $.ajax(
+        {
+            url: "https://localhost:44326/api/Trabajadores/Poblacion/" + encodeURIComponent(filtro),
+            method: 'GET',
+            dataType: 'json',
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': localStorage.getItem('token') /* Recogemos el token guardado en memoria (se llama a guardar en index.cshtml) */
+            },
+            contentType: 'application/json',
+
+            success: function (poblacion) {
+                localStorage.setItem("poblacionID"+filtro, poblacion); /* guardamos el json en memoria */
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        }
+    );
+}
+
+function GetGeneroChartID(filtro) {
+    // Función para el GET de la API a Trabajadores/Genero. Guarda el json devuelto en una variable en memoria llamada 'genero'.
+    $.ajax(
+        {
+            url: "https://localhost:44326/api/Trabajadores/Genero/" + encodeURIComponent(filtro),
+            method: 'GET',
+            dataType: 'json',
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': localStorage.getItem('token') /* Recogemos el token guardado en memoria (se llama a guardar en index.cshtml) */
+            },
+            contentType: 'application/json',
+
+            success: function (genero) {
+                localStorage.setItem("generoID" + filtro, genero); /* guardamos el json en memoria */
             },
             error: function (error) {
                 console.log(error);
