@@ -76,35 +76,149 @@
                 </div>
 
                 <!-- Casillas de las unidades organizativas -->
+                <button class="input-group rounded btnOrganizativa">
+                    <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Ayuntamiento</i>
+                    <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                </button>
                 <div id="grupoBoton">
-
-                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
-                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Ayuntamiento</i>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Ajuntament');">Grupo: Ayuntamiento</i>
                         <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
                     </button>
-
-                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
-                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Financias</i>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Alcalde');">Alcalde</i>
                         <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
                     </button>
-
-                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
-                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Marketing</i>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Regidor');">Regidor</i>
                         <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
                     </button>
-
-                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
-                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">RRHH</i>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Àrea de territori, via pública i mobilitat');">Àrea de territori, via pública i mobilitat</i>
                         <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
                     </button>
-
-                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
-                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">I+D</i>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Àrea de transparència i Bon Govern');">Àrea de transparència i Bon Govern</i>
                         <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
                     </button>
-
-                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
-                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">I+A</i>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Area de benestar Social');">Area de benestar Social</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Àrea de cultura Educació i Lleure');">Àrea de cultura Educació i Lleure</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Àrea de urbanisme i Habitatge');">Àrea de urbanisme i Habitatge</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Àrea de comerç, turisme i ocupació');">Àrea de comerç, turisme i ocupació</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Assessor');">Assessor</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Administratiu/va');">Administratiu/va</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Urbanisme, Patrimoni i Centre Històric');">Urbanisme, Patrimoni i Centre Històric</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Sostenibilitat, Serveis Ambientals i Medi Natural');">Sostenibilitat, Serveis Ambientals i Medi Natural</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Actuacions Públiques i Serveis');">Actuacions Públiques i Serveis</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Habitatge');">Habitatge</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Via pública i Barris');">Via pública i Barris</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Mobilitat');">Mobilitat</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Seguretat Ciutadana i Protecció Civil');">Seguretat Ciutadana i Protecció Civil</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Comerç i Turisme');">Comerç i Turisme</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Cultura');">Cultura</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Ensenyament i Politica Lingüistica');">Ensenyament i Politica Lingüistica</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Afers Socials');">Afers Socials</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Acció Comunitària, Participació i Igualtat');">Acció Comunitària, Participació i Igualtat</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Acció Civica i Joventut');">Acció Civica i Joventut</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Salut i Dependéncia');">Salut i Dependéncia</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Governació');">Governació</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Hisenda, Finances i Contractació');">Hisenda, Finances i Contractació</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Transparéncia,Oficina d\'Atenció al Ciutadà i Tecnologia de la Informació');">Transparéncia,Oficina d'Atenció al Ciutadà i Tecnologia de la Informació</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Secretari/a');">Secretari/a</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Interventor/a');">Interventor/a</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Tresorer/a');">Tresorer/a</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Àrea de serveis econòmics');">Àrea de serveis econòmics</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Treballador/a social');">Treballador/a social</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Educador/a social');">Educador/a social</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                    <button class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="GetTablaID('#containerScreen', 'Responsable biblioteques');">Responsable biblioteques</i>
                         <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
                     </button>
                 </div>

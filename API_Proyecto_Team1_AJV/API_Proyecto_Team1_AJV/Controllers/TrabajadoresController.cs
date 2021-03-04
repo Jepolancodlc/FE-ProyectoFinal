@@ -39,10 +39,11 @@ namespace API_Proyecto_Team1_AJV.Controllers
             t => new TablaTrabajadoresDto
             {
                 Id_Trabajador = t.Id,
-                FotoUrl = "../img/"+t.Id+".jpg",
+                FotoUrl = "../img/" + t.Id + ".jpg",
                 Nombre = t.Nombre + " " + t.Apellido1 + " " + t.Apellido2,
                 Email = t.Email,
                 Empresa = t.NivOrg.Organig.Empresas.DEmpresa,
+                Niv_Org = t.NivOrg.DNivel,
                 Telefono = t.Telefono1 + " " + t.Telefono2,
                 Grupo = t.Grupo,
                 Cuerpo = t.CuerpoNavigation.Descrip,
@@ -67,6 +68,17 @@ namespace API_Proyecto_Team1_AJV.Controllers
         public IQueryable<TablaTrabajadoresDto> GetTablaTrabajadores()
         {
             return _context.Trabajadores.Select(AsTablaDto);
+        }
+
+        // GET: api/Trabajadores/5
+        // GET TRABAJADORES POR NIV_ORG PARA LOS FILTROS DEL MENÚ
+        [HttpGet("{d_nivel}")]
+        public IQueryable<TablaTrabajadoresDto> GetTrabajadores(string d_nivel)
+        {
+
+            var trabajadores = _context.Trabajadores.Where(p => p.NivOrg.DNivel == d_nivel).Select(AsTablaDto);
+
+            return trabajadores;
         }
 
         //GET api/Trabajadores/Poblacion

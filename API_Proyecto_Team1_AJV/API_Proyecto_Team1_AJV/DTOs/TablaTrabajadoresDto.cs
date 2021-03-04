@@ -17,6 +17,7 @@ namespace API_Proyecto_Team1_AJV.DTOs
         public string Nombre { get; set; }
         public string Email { get; set; }
         public string Empresa { get; set; }
+        public string Niv_Org { get; set; }
         public string Telefono { get; set; }
         public string Grupo { get; set; }
         public string Cuerpo { get; set; }

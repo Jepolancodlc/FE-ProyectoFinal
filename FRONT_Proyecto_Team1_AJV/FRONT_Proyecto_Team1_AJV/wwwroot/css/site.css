@@ -89,12 +89,6 @@ body {
     padding-right: 25px;
     text-decoration: none;
 }
-/* tabla */
-.colb {
-    border: 1px solid gray;
-    border-top: none;
-    height: 100%;
-}
 
 
 /* SIDEBAR */
@@ -141,11 +135,5 @@ body {
 .icon-bar a:active {
     background-color: white;
     color: #000d2a;
-}
-
-/* ESTILO PAGINADOR */
-.k-pager-wrap .k-link.k-state-selected {
-    color: #fff;
-    background-color: #005AB7 !important;
 }
 

@@ -1,1 +1,12 @@
-﻿
+﻿/* tabla */
+.colb {
+    border: 1px solid gray;
+    border-top: none;
+    height: 100%;
+}
+
+/* ESTILO PAGINADOR */
+.k-pager-wrap .k-link.k-state-selected {
+    color: #fff;
+    background-color: #005AB7 !important;
+}

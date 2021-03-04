@@ -27,13 +27,6 @@
 }
 
 /* Menu Desplegable de filtros */
-#btnDepartamentos {
-    display: block;
-    margin-top: 3px;
-    width: 100%;
-    min-height: 50px;
-}
-
 .btnMenu {
     font-style: inherit;
     font-size: larger;
@@ -72,9 +65,22 @@
 .btnOrganizativa {
     background-color: white;
     color: #005ab7;
+    display: block;
+    margin-top: 3px;
+    width: 100%;
+    min-height: 50px;
 }
 
 .btnOrganizativaActive {
     background-color: #b2cdea;
     color: #005ab7;
+}
+
+#grupoBoton {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow: scroll;
+    max-height: calc(100vh - 270px);
 }
