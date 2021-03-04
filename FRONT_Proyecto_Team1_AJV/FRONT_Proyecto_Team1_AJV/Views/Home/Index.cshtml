@@ -6,3 +6,120 @@
     }
     <!-- FIN DE TOKEN -->
 </div>
+<!-- Main -->
+<!-- Sidebar -->
+<div class="col-sm-auto" id="colSideBar">
+    <div>
+        <div class="icon-bar">
+            <img id="logo" src="~/img/logo.jpg" width="70" />
+            <a href="#" class="active">
+                <i class="bi bi-person-fill"></i>
+                <label class="lblNames" style="display: none;">Trabajadores</label>
+            </a>
+            <a href="#">
+                <i class="bi bi-tag"></i>
+                <label class="lblNames" style="display: none;">Etiquetas</label>
+            </a>
+            <a href="#a">
+                <i class="bi bi-display"></i>
+                <label class="lblNames" style="display: none;">Vistas</label>
+            </a>
+            <a href="#b">
+                <i class="bi bi-bag"></i>
+                <label class="lblNames" style="display: none;">Trabajo</label>
+            </a>
+            <a href="#c">
+                <i class="bi bi-tag-fill"></i>
+                <label class="lblNames" style="display: none;">CE</label>
+            </a>
+            <a href="#">
+                <i class="bi bi-diagram-3-fill"></i>
+                <label class="lblNames" style="display: none;">Organigrama</label>
+            </a>
+            <a href="#">
+                <i class="bi bi-graph-up"></i>
+                <label class="lblNames" style="display: none;">Estadísticas</label>
+            </a>
+            <button type="button" id="btnHide" > <i class="fas fa-chevron-right"></i></button>
+
+        </div>
+    </div>
+</div>
+<div class="col-sm col2">
+    <!-- Menu Horizontal -->
+    <div class="row">
+        <div class="col colhor ">
+            <button class="btnNav"><i id="ico" class="fas fa-bars"></i></button>
+            <label> Trabajadores </label>
+            <div id="secbtn">
+                <button class="btnDis" disabled id="fecha">
+                    <i class="bi bi-calendar-event"></i>
+                </button>
+                <button class="btnDis" disabled>
+                    <i class="bi bi-diagram-3-fill"></i> Grupo Castilla (No
+                    tocar)
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row vh-100">
+        <!-- Menu Filtros -->
+        <div class="col-2" id="colMenuFiltros">
+            <div class="MenuFiltros">
+                <div class="input-group rounded">
+                    <!-- INPUT de filtros -->
+                    <input id="buscador" type="search" class="form-control rounded" placeholder="Filtrar unidad organizativa" aria-label="Search"
+                           aria-describedby="search-addon" />
+                    <button id="btnFilter" type="button" class="btn btn-primary">
+                        <i onclick="activarFiltros('#containerScreen')" class="bi bi-funnel-fill"></i>
+                    </button>
+                </div>
+
+                <!-- Casillas de las unidades organizativas -->
+                <div id="grupoBoton">
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Ayuntamiento</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Financias</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">Marketing</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">RRHH</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">I+D</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+
+                    <button id="btnDepartamentos" class="input-group rounded btnOrganizativa">
+                        <i class="btnMenu" onclick="PrintarTabla('#containerScreen');">I+A</i>
+                        <i onclick="getKendoCharts('#containerScreen')" class="bi bi-graph-up btnMenu"></i>
+                    </button>
+                </div>
+
+                <div id="footerFiltros">
+                    <a href="#home">
+                        <i class="bi bi-question-diamond-fill"></i>
+                    </a>
+                    <a href="#about">
+                        <i class="bi bi-globe2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Tabla -->
+        <div id="containerScreen" class="col-10 colb containerScreen vh-100"></div>
+    </div>
+</div>

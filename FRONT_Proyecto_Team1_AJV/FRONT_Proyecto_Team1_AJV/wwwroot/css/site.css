@@ -1,6 +1,7 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -8,6 +9,20 @@ a.navbar-brand {
 }
 
 /* Provide sufficient contrast against white background */
+#itemNav {
+    flex-direction: row !important;
+    
+}
+
+
+#itemNav a, #itemNav li button, #itemNav li {
+    color: white !important;
+    font-size: 19px !important;
+    height: 10px !important;
+    padding-top: inherit;
+    margin-bottom: 15px;
+}
+    
 a {
     color: #0366d6;
 }
@@ -24,130 +39,75 @@ a {
     border-color: #1861ac;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    font-size: 14px;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-.border-top {
-    border-top: 1px solid #e5e5e5;
-}
-
-.border-bottom {
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-    font-size: 1rem;
-    line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-}
-
+/* ESTILOS PROYECTO */
 body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px; /* Vertically center the text there */
-}
-
-
-html, body {
     height: 100%;
-    margin: 0;
+    background-color: #efefef;
+}
+.vh-100 {
+    height: calc(100vh - 88px) !important;
 }
 
-#ja {
-    background-color: burlywood;
+.containerScreen {
+    box-sizing: inherit !important;
+    background-color: #efefef !important;
 }
 
-#headerbar {
+.nav a:visited, .nav a {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.nav li {
+    font-size: 12px;
+    padding-right: 10px;
+    margin-bottom: 0;
+}
+
+.headerICO{
+    margin: 5px;
+}
+
+#header {
     border-bottom: 2px solid gray;
+    background: rgb(0,48,146);
+    background: linear-gradient(90deg, rgba(0,48,146,1) 0%, rgba(0,48,146,1) 35%, rgba(37,114,194,1) 100%);
 }
 
 .btnNav {
     border: none;
     background-color: transparent;
-    margin: 2px;
+    padding: 2px;
 }
 
-
-/* contenido */
-.col2 {
-    background-color: cornflowerblue;
+#NavBtn1 {
+    color: white;
 }
 
-/* Barra horizontal */
-.colhor {
-    background-color: white;
-    border-bottom: 2px solid gray;
+#footerFiltros a {
+    padding-right: 25px;
+    text-decoration: none;
 }
-
-#ico {
-    margin-top: 7px;
-    font-size: 20px;
-}
-
-#secbtn {
-    float: right;
-    margin-top: 7px;
-    margin-bottom: 7px;
-}
-
-.btnDis {
-    font-size: 12px;
-    border-radius: 4px;
-    background-color: transparent;
-    color: cornflowerblue;
-    border-style: solid;
-}
-
-/* Menu Desplegable de filtros */
-.cola {
-    background-color: rebeccapurple;
+/* tabla */
+.colb {
+    border: 1px solid gray;
+    border-top: none;
     height: 100%;
 }
 
 
-/* tabla */
-.colb {
-    background-color: pink;
-}
-
-
-
 /* SIDEBAR */
-#col1 {
+#colSideBar {
     background-color: #000d2a;
-    margin: 0;
+    border-right: 1px solid gray;
+    margin-top: -2px;
     padding: 0;
 }
 
-.icon-bar a {
+.icon-bar a, #logo {
     display: block;
-    text-align: center;
+    text-align: left;
     padding: 16px;
     transition: all 0.3s ease;
     color: white;
@@ -156,23 +116,36 @@ html, body {
 }
 
 .lblNames {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .icon-bar a:hover {
     background-color: white;
+    color: #000d2a;
+}
+
+#btnHide {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    border-style: none;
 }
 
 .active {
     background-color: #005ab7;
+    color: #000d2a;
 }
 
-#btnHide {
-    float: right;
-    font-size: 12px;
-    border-radius: 4px;
-    background-color: transparent;
-    color: crimson;
-    border-style: none;
-    margin-top: 100%;
+.icon-bar a:active {
+    background-color: white;
+    color: #000d2a;
 }
+
+/* ESTILO PAGINADOR */
+.k-pager-wrap .k-link.k-state-selected {
+    color: #fff;
+    background-color: #005AB7 !important;
+}
+

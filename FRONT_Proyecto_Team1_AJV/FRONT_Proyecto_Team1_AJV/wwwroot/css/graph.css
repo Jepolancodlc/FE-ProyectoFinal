@@ -1,7 +1,26 @@
 ﻿.graph {
     float: left;
     min-width: 30%;
+    margin: 20px;
+    border-radius: 3px;
+    border-color: grey !important;
+    border: 3px !important;
+    border-style: groove !important;
 }
 .graphGrande {
-    min-width: 100%;
+    min-width: 90%;
+    margin: 20px;
+    border-radius: 3px;
+    border-color: grey !important;
+    border: 3px !important;
+    border-style: groove !important;
+}
+
+.hide {
+    display: none !important
+}
+
+#contentCharts{
+    overflow: scroll;
+    max-height: 100%;
 }
