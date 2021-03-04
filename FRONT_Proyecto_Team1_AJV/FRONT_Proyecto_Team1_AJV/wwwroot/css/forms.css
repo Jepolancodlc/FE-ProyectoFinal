@@ -1,0 +1,63 @@
+﻿#loginContainer {
+    width: 100%;
+    display: flex;
+    margin: 6%;
+    background-color: #005ab7;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 50px 20px;
+}
+
+.card, #divLogo {
+    margin: auto
+}
+
+.card {
+    border-radius: 25px;
+}
+
+#divLogo{
+    display:flex
+     
+}
+
+#account {
+    margin: 7%;
+}
+
+#divLogo p {
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+    padding-left: 50px;
+}
+
+.bi-tropical-storm {
+    font-size: 200px;
+}
+#colIzq, #colDer {
+    display: flex;
+    justify-content: center;
+}
+
+#colIzq {
+    border-right: 5px groove;
+    color: white;
+}
+
+#btnLogin {
+    width: 100%;
+}
+
+#p1 {
+    float: left;
+    display: inline-flex;
+    padding-right: 10px;
+   
+}
+
+#p2 {
+    float: right;
+    display: inline-flex;
+   
+}
