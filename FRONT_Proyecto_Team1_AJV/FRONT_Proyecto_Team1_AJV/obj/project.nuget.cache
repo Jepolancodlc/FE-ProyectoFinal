@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5Iy/PSFpD89zuFJfXof7zZPaVR2hWZP3KQnlGR6dHeqtqVOjWbKgMCEHhn1uqklS3dFSrlcHE+rGKmWfatm9UQ==",
+  "dgSpecHash": "wM7wmf3CT3l1x/LxtlJoPF0W7P85XMe/lyuuS6/lvJ6ylG9pmonXORvbh2hWCFuK6DZuaq2kP2lV8JKSVzErmQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\victo\\source\\repos\\Jepolancodlc\\FE-ProyectoFinal\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV.csproj",
+  "projectFilePath": "C:\\Users\\victo\\source\\repos\\Jepolancodlc_05_03_2021_V1_COLGADA_WEB\\FE-ProyectoFinal\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\victo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.12\\microsoft.aspnetcore.cryptography.internal.3.1.12.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.12\\microsoft.aspnetcore.cryptography.keyderivation.3.1.12.nupkg.sha512",

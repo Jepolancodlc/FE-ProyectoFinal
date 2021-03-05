@@ -8848,11 +8848,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\victo\\Source\\Repos\\Jepolancodlc\\FE-ProyectoFinal\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV.csproj",
+      "projectUniqueName": "C:\\Users\\victo\\source\\repos\\Jepolancodlc_05_03_2021_V1_COLGADA_WEB\\FE-ProyectoFinal\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV.csproj",
       "projectName": "FRONT_Proyecto_Team1_AJV",
-      "projectPath": "C:\\Users\\victo\\Source\\Repos\\Jepolancodlc\\FE-ProyectoFinal\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV.csproj",
+      "projectPath": "C:\\Users\\victo\\source\\repos\\Jepolancodlc_05_03_2021_V1_COLGADA_WEB\\FE-ProyectoFinal\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV.csproj",
       "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\victo\\Source\\Repos\\Jepolancodlc\\FE-ProyectoFinal\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV\\obj\\",
+      "outputPath": "C:\\Users\\victo\\source\\repos\\Jepolancodlc_05_03_2021_V1_COLGADA_WEB\\FE-ProyectoFinal\\FRONT_Proyecto_Team1_AJV\\FRONT_Proyecto_Team1_AJV\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

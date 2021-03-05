@@ -1,10 +1,23 @@
 ﻿@page
 @model LogoutModel
 @{
-    ViewData["Title"] = "Log out";
+    ViewData["Title"] = "";
 }
 
-<header>
-    <h1>@ViewData["Title"]</h1>
-    <p>You have successfully logged out of the application.</p>
-</header>
+<div id="rowLogin" class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <img id="logoImg" src="~/img/logoNet.png" alt="Logo" />
+            </div>
+            <section class="card-body">
+                <h1>Sesión Cerrada</h1>
+                <p>Usted se ha desconectado satisfactóriamente de la aplicación.</p>
+            </section>
+            <div class="card-footer form-group">
+                <p>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

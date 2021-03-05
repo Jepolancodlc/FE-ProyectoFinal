@@ -11,9 +11,10 @@ function PrintarTabla(loc) {
 }
 
 function GetTabla(loc) {
+    // FUNCIÓN GET PARA BUSCAR TODOS LOS DATOS DE LA BD EN FORMATO JSON Y PRINTARLOS EN UNA TABLA EN LA LOCALIZACIÓN PASADA POR PARÁMETRO
     $.ajax(
         {
-            url: "https://localhost:44326/api/Trabajadores",
+            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores",
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -57,7 +58,21 @@ function GetTabla(loc) {
                     resizable: true,
                     reorderable: true,
                     groupable: true,
-                    filterable: true,
+                    filterable: {
+                        messages: {
+                            info: "Muestra items cuyo valor:",
+                            isTrue: "es verdadero",
+                            isFalse: "es falso",
+                            filter: "Filtra",
+                            clear: "Borra",
+                            and: "Y",
+                            or: "Ó",
+                            selectValue: "-Selecciona valor-",
+                            operator: "Operador",
+                            value: "Valor",
+                            cancel: "Cancelar"
+                        }
+                    },
                     columns: [
                         { field: "id_Trabajador", title: "ID", width: "90px"  },
                         { template: "<img src='#:fotoUrl#' style='width:45px;height:50px;border-radius: 20%;' />", title: "Img", width: "90px"},
@@ -85,9 +100,10 @@ function GetTabla(loc) {
 
 
 function GetTablaID(loc, niv_org) {
+    // FUNCIÓN GET PARA BUSCAR POR ID LOS DATOS DE LA BD EN FORMATO JSON Y PRINTARLOS EN UNA TABLA EN LA LOCALIZACIÓN PASADA POR PARÁMETRO
     $.ajax(
         {
-            url: "https://localhost:44326/api/Trabajadores/" + encodeURIComponent(niv_org),
+            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/" + encodeURIComponent(niv_org),
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -132,7 +148,21 @@ function GetTablaID(loc, niv_org) {
                     resizable: true,
                     reorderable: true,
                     groupable: true,
-                    filterable: true,
+                    filterable: {
+                        messages: {
+                            info: "Muestra items cuyo valor:",
+                            isTrue: "es verdadero",
+                            isFalse: "es falso",
+                            filter: "Filtra",
+                            clear: "Borra",
+                            and: "Y",
+                            or: "Ó",
+                            selectValue: "-Selecciona valor-",
+                            operator: "Operador",
+                            value: "Valor",
+                            cancel: "Cancelar"
+                        }
+                    },
                     columns: [
                         { field: "id_Trabajador", title: "ID", width: "90px" },
                         { template: "<img src='#:fotoUrl#' style='width:45px;height:50px;border-radius: 20%;' />", title: "Img", width: "90px" },

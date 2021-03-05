@@ -5,7 +5,7 @@
 
 $(document).ready(function () {
     // MUESTRA/OCULTA EL SIDEBAR
-    $("#NavBtn1").click(function () {
+    $("#navBtn1").click(function () {
         $("#colSideBar").toggle();
     });
 
@@ -17,10 +17,6 @@ $(document).ready(function () {
     let f = new Date();
     $("#fecha").html(`${f.getDate()} ${meses[f.getMonth()]} ${f.getFullYear()}`);
 });
-
-function activarFiltros(loc) {
-    // BOTÓN PARA ACTIVAR/DESACTIVAR LOS FILTROS DE LA TABLA
-}
 
 $(document).ready(function () {
     // FILTRO INPUT

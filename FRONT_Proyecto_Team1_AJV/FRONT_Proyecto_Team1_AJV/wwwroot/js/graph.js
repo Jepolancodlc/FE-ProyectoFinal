@@ -105,6 +105,7 @@ function getKendoCharts(loc) {
     ];
 
     let presupuestoDepartamentoAnual = [
+        // TREE CHART
         {
             "name": "Ayuntamiento",
             "value": 100000,
@@ -294,6 +295,7 @@ function getKendoCharts(loc) {
     ];
 
     let gastoDepartamentos = [
+        // RADAR CHART
         {
             "gasto": "Nóminas",
             "euros": 8995
@@ -325,6 +327,7 @@ function getKendoCharts(loc) {
     ];
 
     let horasTrabajadores = [{
+        // COLUMN CHAR
         name: "Horas por Contrato",
         data: [120, 115, 123, 125, 120, 110, 50, 112, 123],
         markers: { type: "square" }
@@ -674,11 +677,12 @@ function poblacionChart(data, loc) {
     });
 }
 
+/* FUNCIONES GETTERS PARA LOS CHARTS */
 function GetPoblacionChart() {
     // Función para el GET de la API a Trabajadores/Poblacion. Guarda el json devuelto en una variable en memoria llamada 'poblacion'.
     $.ajax(
         {
-            url: "https://localhost:44326/api/Trabajadores/Poblacion",
+            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Poblacion",
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -701,7 +705,7 @@ function GetGeneroChart() {
     // Función para el GET de la API a Trabajadores/Genero. Guarda el json devuelto en una variable en memoria llamada 'genero'.
     $.ajax(
         {
-            url: "https://localhost:44326/api/Trabajadores/Genero",
+            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Genero",
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -720,13 +724,11 @@ function GetGeneroChart() {
     );
 }
 
-
-/* FUNCIONES GETTERS PARA LOS CHARTS */
 function GetPoblacionChartID(filtro) {
     // Función para el GET de la API a Trabajadores/Poblacion. Guarda el json devuelto en una variable en memoria llamada 'poblacion'.
     $.ajax(
         {
-            url: "https://localhost:44326/api/Trabajadores/Poblacion/" + encodeURIComponent(filtro),
+            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Poblacion/" + encodeURIComponent(filtro),
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -749,7 +751,7 @@ function GetGeneroChartID(filtro) {
     // Función para el GET de la API a Trabajadores/Genero. Guarda el json devuelto en una variable en memoria llamada 'genero'.
     $.ajax(
         {
-            url: "https://localhost:44326/api/Trabajadores/Genero/" + encodeURIComponent(filtro),
+            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Genero" + encodeURIComponent(filtro),
             method: 'GET',
             dataType: 'json',
             headers: {
