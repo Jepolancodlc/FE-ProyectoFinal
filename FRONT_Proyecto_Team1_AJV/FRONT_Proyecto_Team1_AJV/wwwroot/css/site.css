@@ -1,19 +1,13 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-
-a.navbar-brand {
+﻿a.navbar-brand {
     white-space: normal;
     text-align: center;
     word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
 #itemNav {
     flex-direction: row !important;
     
 }
-
 
 #itemNav a, #itemNav li button, #itemNav li {
     color: white !important;
@@ -90,7 +84,6 @@ body {
     text-decoration: none;
 }
 
-
 /* SIDEBAR */
 #colSideBar {
     background-color: #000d2a;
@@ -136,4 +129,3 @@ body {
     background-color: white;
     color: #000d2a;
 }
-

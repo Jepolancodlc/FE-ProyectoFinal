@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="~/css/graph.css" />
     <link rel="stylesheet" href="~/css/menu.css" />
     <link rel="stylesheet" href="~/css/tabla.css" />
+    <link rel="stylesheet" href="~/css/login.css" />
     <!-- Links para importar las liberías de Kendo -->
     <link href="https://kendo.cdn.telerik.com/2021.1.224/styles/kendo.common.min.css" rel="stylesheet" />
     <link href="https://kendo.cdn.telerik.com/2021.1.224/styles/kendo.default.min.css" rel="stylesheet" />
@@ -24,17 +25,15 @@
             <nav id="header" class="navbar navbar-light bg-light">
                 <button id="NavBtn1" class="btnNav"><i class="fas fa-bars"></i></button>
                 <div class="nav">
-                     @* Habria que editar el estilo de: *@
-                     <partial name="_LoginPartial"/>
+                    <partial name="_LoginPartial" />
                 </div>
             </nav>
         </div>
     </header>
 
     <div id="container" class="container-fluid">
-        <div id="rowContainer" class="row vh-100">
-            @RenderBody()
-        </div>
+        @RenderBody()
+    </div>
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
