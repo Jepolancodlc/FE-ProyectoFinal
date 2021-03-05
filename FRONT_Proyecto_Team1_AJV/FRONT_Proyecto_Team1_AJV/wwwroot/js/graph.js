@@ -751,7 +751,7 @@ function GetGeneroChartID(filtro) {
     // Función para el GET de la API a Trabajadores/Genero. Guarda el json devuelto en una variable en memoria llamada 'genero'.
     $.ajax(
         {
-            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Genero" + encodeURIComponent(filtro),
+            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Genero/" + encodeURIComponent(filtro),
             method: 'GET',
             dataType: 'json',
             headers: {
