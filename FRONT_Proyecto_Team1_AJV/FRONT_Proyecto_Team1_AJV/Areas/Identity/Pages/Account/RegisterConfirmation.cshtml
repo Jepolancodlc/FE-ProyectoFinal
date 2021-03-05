@@ -1,0 +1,37 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div id="rowLogin" class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <img id="logoImg" src="~/img/logoNet.png" alt="Logo" />
+            </div>
+            <section class="card-body">
+                @{
+                    if (@Model.DisplayConfirmAccountLink)
+                    {
+                        <p>
+                            <a id="confirm-link" href="@Model.EmailConfirmationUrl">Haz clic aquí para confirmar su cuenta</a>
+                        </p>
+                    }
+                    else
+                    {
+                        <p>
+                            Por favor revise su email para confirmar su cuenta.
+                        </p>
+                    }
+                }
+            </section>
+            <div class="card-footer form-group">
+                <p>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿.card {
+    margin-top: 10%;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#logoImg {
+    width: 40%;
+    margin-left: 26%;
+}
+
+#ManageNav a {
+    color: black
+}
+
+#rowLogin{
+    width: 100%;
+}
+
+.card-footer {
+    margin-bottom: 0%;
+}

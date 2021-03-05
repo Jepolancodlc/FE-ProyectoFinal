@@ -1,0 +1,139 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+#itemNav {
+    flex-direction: row !important;
+    
+}
+
+
+#itemNav a, #itemNav li button, #itemNav li {
+    color: white !important;
+    font-size: 19px !important;
+    height: 10px !important;
+    padding-top: inherit;
+    margin-bottom: 15px;
+}
+    
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* ESTILOS PROYECTO */
+body {
+    height: 100%;
+    background-color: #efefef;
+}
+.vh-100 {
+    height: calc(100vh - 88px) !important;
+}
+
+.containerScreen {
+    box-sizing: inherit !important;
+    background-color: #efefef !important;
+}
+
+.nav a:visited, .nav a {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.nav li {
+    font-size: 12px;
+    padding-right: 10px;
+    margin-bottom: 0;
+}
+
+.headerICO{
+    margin: 5px;
+}
+
+#header {
+    border-bottom: 2px solid gray;
+    background: rgb(0,48,146);
+    background: linear-gradient(90deg, rgba(0,48,146,1) 0%, rgba(0,48,146,1) 35%, rgba(37,114,194,1) 100%);
+}
+
+.btnNav {
+    border: none;
+    background-color: transparent;
+    padding: 2px;
+}
+
+#navBtn1 {
+    color: white;
+}
+
+#footerFiltros a {
+    padding-right: 25px;
+    text-decoration: none;
+}
+
+
+/* SIDEBAR */
+#colSideBar {
+    background-color: #000d2a;
+    border-right: 1px solid gray;
+    margin-top: -2px;
+    padding: 0;
+}
+
+.icon-bar a, #logo {
+    display: block;
+    text-align: left;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.lblNames {
+    margin-left: 15px;
+}
+
+.icon-bar a:hover {
+    background-color: white;
+    color: #000d2a;
+}
+
+#btnHide {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    border-style: none;
+}
+
+.active {
+    background-color: #005ab7;
+    color: #000d2a;
+}
+
+.icon-bar a:active {
+    background-color: white;
+    color: #000d2a;
+}
+
