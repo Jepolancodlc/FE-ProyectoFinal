@@ -14,7 +14,7 @@ function GetTabla(loc) {
     // FUNCIÓN GET PARA BUSCAR TODOS LOS DATOS DE LA BD EN FORMATO JSON Y PRINTARLOS EN UNA TABLA EN LA LOCALIZACIÓN PASADA POR PARÁMETRO
     $.ajax(
         {
-            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores",
+            url: "https://localhost:44304/api/Trabajadores",
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -103,7 +103,7 @@ function GetTablaID(loc, niv_org) {
     // FUNCIÓN GET PARA BUSCAR POR ID LOS DATOS DE LA BD EN FORMATO JSON Y PRINTARLOS EN UNA TABLA EN LA LOCALIZACIÓN PASADA POR PARÁMETRO
     $.ajax(
         {
-            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/" + encodeURIComponent(niv_org),
+            url: "https://localhost:44304/api/Trabajadores/" + encodeURIComponent(niv_org),
             method: 'GET',
             dataType: 'json',
             headers: {

@@ -682,7 +682,7 @@ function GetPoblacionChart() {
     // Función para el GET de la API a Trabajadores/Poblacion. Guarda el json devuelto en una variable en memoria llamada 'poblacion'.
     $.ajax(
         {
-            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Poblacion",
+            url: "https://localhost:44304/api/Trabajadores/Poblacion",
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -705,7 +705,7 @@ function GetGeneroChart() {
     // Función para el GET de la API a Trabajadores/Genero. Guarda el json devuelto en una variable en memoria llamada 'genero'.
     $.ajax(
         {
-            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Genero",
+            url: "https://localhost:44304/api/Trabajadores/Genero",
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -728,7 +728,7 @@ function GetPoblacionChartID(filtro) {
     // Función para el GET de la API a Trabajadores/Poblacion. Guarda el json devuelto en una variable en memoria llamada 'poblacion'.
     $.ajax(
         {
-            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Poblacion/" + encodeURIComponent(filtro),
+            url: "https://localhost:44304/api/Trabajadores/Poblacion/" + encodeURIComponent(filtro),
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -751,7 +751,7 @@ function GetGeneroChartID(filtro) {
     // Función para el GET de la API a Trabajadores/Genero. Guarda el json devuelto en una variable en memoria llamada 'genero'.
     $.ajax(
         {
-            url: "http://www.userstrabajadoresnet.somee.com/API/Trabajadores/Genero/" + encodeURIComponent(filtro),
+            url: "https://localhost:44304/api/Trabajadores/Genero/" + encodeURIComponent(filtro),
             method: 'GET',
             dataType: 'json',
             headers: {
