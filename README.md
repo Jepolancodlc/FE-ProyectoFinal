@@ -6,7 +6,7 @@ Repositorio del proyecto final para el curso de .Net Framework de la Fundación 
   - Arnau Diez Sans - [@ArnauDiezSans](https://github.com/ArnauDiezSans)
   - Víctor Alfonso Martí - [@Victor Alfonso Marti](https://github.com/VictorAlfonsoMarti)
 
-## :octocat: Proyecto:
+## :octocat: Proyecto 1 - Indicadores Dinámicos (Gráficos):
     - El proyecto ha sido desplegado online y es accesible a través de la siguiete url:
    ## http://trabajadoresnet.somee.com/
 
