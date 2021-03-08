@@ -119,7 +119,7 @@ Microsoft.VisualStudio.Web.CodeGeneration.Design      - Version 3.1.5
 
 ## 🔧 DESARROLLO: 
   ### 📋 URL de desarrollo:
-  - [Kanban](https://trello.com/b/cyLtvxC1/trabajadoresnet)
+  - [Trello](https://trello.com/b/cyLtvxC1/trabajadoresnet)
 
   #### 📺 Esquema del HTML 
   ![TrabajadoresNet_EsquemaHTML](https://user-images.githubusercontent.com/9554810/110242573-fb011800-7f56-11eb-99cc-d96a3c9ee03e.png)
