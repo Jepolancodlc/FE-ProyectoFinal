@@ -7,7 +7,8 @@ Repositorio del proyecto final para el curso de .Net Framework de la Fundación 
   - Víctor Alfonso Martí - [@Victor Alfonso Marti](https://github.com/VictorAlfonsoMarti)
 
 ## :octocat: Proyecto:
-    - El proyecto ha sido desplegado online y es accesible a través de la siguiete url: http://trabajadoresnet.somee.com/
+    - El proyecto ha sido desplegado online y es accesible a través de la siguiete url:
+   ## http://trabajadoresnet.somee.com/
 
 ### :shipit: Proyecto para localhost:
     - Puede descargar el proyecto preparado para localhost en: https://github.com/Jepolancodlc/FE-ProyectoFinal/tree/Master_para_uso_en_local
