@@ -11,44 +11,44 @@ Repositorio del proyecto final para el curso de .Net Framework de la Fundación 
    ## http://trabajadoresnet.somee.com/
 
 ### :shipit: Proyecto para localhost:
-    - Puede descargar el proyecto preparado para localhost en: https://github.com/Jepolancodlc/FE-ProyectoFinal/tree/Master_para_uso_en_local
-    - Para poder acceder en el host, tendrá que realizar los siguientes cambios:
-           - DB:
-		```
-		1. Descargar las dos Bases de Datos localizadas en: https://github.com/Jepolancodlc/FE-ProyectoFinal/tree/Master_para_uso_en_local/DB
-		2. Cargar las dos Bases de Datos en local o en una máquina virtual usando Microsoft SQL Server.
-                ```
-           - API:
-                ```
-		1. Descargar la API localizada en: https://github.com/Jepolancodlc/FE-ProyectoFinal/tree/Master_para_uso_en_local/API_Proyecto_Team1_AJV
-		2. Modificar el archivo appsettings.json localizado en la carpeta raiz :
-		3. Sustituir el servidor, el usuario y la contraseña por las correspondientes en local. Database=TrabajadoresNet;
-                  "AllowedHosts": "*",
-                    "ConnectionStrings": {
-                      "TrabajadoresNetDatabase": "Server=SERVER;Database=TrabajadoresNet;User ID=USER;Password=PASSWORD;MultipleActiveResultSets=true"
-                    },
-                ```
+- Puede descargar el proyecto preparado para localhost en: https://github.com/Jepolancodlc/FE-ProyectoFinal/tree/Master_para_uso_en_local
+- Para poder acceder en el host, tendrá que realizar los siguientes cambios:
+   - DB:
+	```
+	1. Descargar las dos Bases de Datos localizadas en: https://github.com/Jepolancodlc/FE-ProyectoFinal/tree/Master_para_uso_en_local/DB
+	2. Cargar las dos Bases de Datos en local o en una máquina virtual usando Microsoft SQL Server.
+	```
+   - API:
+	```
+	1. Descargar la API localizada en: https://github.com/Jepolancodlc/FE-ProyectoFinal/tree/Master_para_uso_en_local/API_Proyecto_Team1_AJV
+	2. Modificar el archivo appsettings.json localizado en la carpeta raiz :
+	3. Sustituir el servidor, el usuario y la contraseña por las correspondientes en local. Database=TrabajadoresNet;
+	  "AllowedHosts": "*",
+	    "ConnectionStrings": {
+	      "TrabajadoresNetDatabase": "Server=SERVER;Database=TrabajadoresNet;User ID=USER;Password=PASSWORD;MultipleActiveResultSets=true"
+	    },
+	```
 
-           - FRONT:
-                ```
-		1. Descargar el FRONT localizado en: https://github.com/Jepolancodlc/FE-ProyectoFinal/tree/Master_para_uso_en_local/FRONT_Proyecto_Team1_AJV
-		2. Modificar el archivo appsettings.json localizado en la carpeta raiz :
-		3. Sustituir el servidor, el usuario y la contraseña por las correspondientes en local. Database=UsersTrabajadoresNet;
-                  "ConnectionStrings": {
-                     "DefaultConnection": "Server=SERVER;Database=UsersTrabajadoresNet;User ID=USER;Password=PASSWORD"
-                   },
-		4. Revisar que las conexiones a los ENDPOINT de la API tengan el puerto correcto, cambiar el puerto si no coincidiera con el de la api en ejecución:
-		4.1 Archivo token.js localizado en wwwroot/js:
-			línea 9 --> url: "https://localhost:44304/api/TokenUsers",
-		4.2 Archivo tabla.js localizado en wwwroot/js:
-                        línea 17 --> url: "https://localhost:44304/api/Trabajadores",
-			línea 106 --> url: "https://localhost:44304/api/Trabajadores/" + encodeURIComponent(niv_org),
-                4.3 Archivo graph.js localizado en wwwroot/js:
-			línea 685 --> url: "https://localhost:44304/api/Trabajadores/Poblacion",
-			línea 708 --> url: "https://localhost:44304/api/Trabajadores/Genero",
-			línea 731 --> url: "https://localhost:44304/api/Trabajadores/Poblacion/" + encodeURIComponent(filtro),
-			línea 754 --> url: "https://localhost:44304/api/Trabajadores/Genero/" + encodeURIComponent(filtro),			
-                ```
+   - FRONT:
+	```
+	1. Descargar el FRONT localizado en: https://github.com/Jepolancodlc/FE-ProyectoFinal/tree/Master_para_uso_en_local/FRONT_Proyecto_Team1_AJV
+	2. Modificar el archivo appsettings.json localizado en la carpeta raiz :
+	3. Sustituir el servidor, el usuario y la contraseña por las correspondientes en local. Database=UsersTrabajadoresNet;
+	  "ConnectionStrings": {
+	     "DefaultConnection": "Server=SERVER;Database=UsersTrabajadoresNet;User ID=USER;Password=PASSWORD"
+	   },
+	4. Revisar que las conexiones a los ENDPOINT de la API tengan el puerto correcto, cambiar el puerto si no coincidiera con el de la api en ejecución:
+	4.1 Archivo token.js localizado en wwwroot/js:
+		línea 9 --> url: "https://localhost:44304/api/TokenUsers",
+	4.2 Archivo tabla.js localizado en wwwroot/js:
+		línea 17 --> url: "https://localhost:44304/api/Trabajadores",
+		línea 106 --> url: "https://localhost:44304/api/Trabajadores/" + encodeURIComponent(niv_org),
+	4.3 Archivo graph.js localizado en wwwroot/js:
+		línea 685 --> url: "https://localhost:44304/api/Trabajadores/Poblacion",
+		línea 708 --> url: "https://localhost:44304/api/Trabajadores/Genero",
+		línea 731 --> url: "https://localhost:44304/api/Trabajadores/Poblacion/" + encodeURIComponent(filtro),
+		línea 754 --> url: "https://localhost:44304/api/Trabajadores/Genero/" + encodeURIComponent(filtro),			
+	```
 
 
 ## 🏭 API:
